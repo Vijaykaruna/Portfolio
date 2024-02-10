@@ -1,0 +1,228 @@
+body{
+    background-image: url(BG.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: aliceblue;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: right;
+    padding-right: 50px;
+    margin-top: -40px;
+    position: relative;
+  }
+  .logo{
+    margin-left: 5%;
+    margin-top: 2%;
+    color: rgb(240, 35, 80);
+  }
+nav ul li a{
+  text-decoration: none;
+   color: aliceblue;
+   margin-right:50px ;
+}
+nav ul li a:hover{
+   border-bottom: 2px solid white;
+   filter: drop-shadow(0 0 0.20rem rgb(255, 255, 255));
+}
+.media{
+  margin-top: 30px;
+  margin-bottom: 15%;
+}
+.media img{
+  margin-right: 25px;
+}
+.media a:hover{
+  filter: drop-shadow(0 0 0.20rem rgb(255, 255, 255));
+}
+/* Home page*/
+.con-details{
+  margin-left: 15%;
+  margin-top: 10%;
+}
+.details{
+  font-weight: bolder;
+}
+.line{
+  width: 500px;
+  margin-bottom: 20px;
+}
+.con-details strong{
+  color: rgb(240, 35, 80);
+}
+.con-details p{
+  margin: 0;
+  padding: 0;
+}
+.con-details p{
+  font-size:xx-large;
+  margin-top: 2px;
+  line-height: 60px;
+}
+ .contact-con{
+  display: flex;
+  margin-left: 30%;
+}
+.talks{
+  text-align: center;
+  margin-bottom: 9%;
+  border: 2px solid rgb(240, 35, 80);
+  background-color: rgba(0, 0, 0, 0.836);
+  border-radius: 10px;
+  padding: 1%;
+  margin: 3% 30%;
+}
+.con-msg{
+  text-align: center;
+  font-weight: bold;
+  text-decoration: underline;
+  font-size: larger;
+}
+input{
+  background-color: rgba(0, 0, 0, 0.836);
+  color: antiquewhite;
+  height:25px;
+  width:230px;
+  border: 2px solid  rgb(240, 35, 80);
+  border-radius: 5px;
+  margin: 10px;
+}
+textarea{
+  background-color: rgba(0, 0, 0, 0.836);
+  color: antiquewhite;
+  margin: 10px;
+  border: 1px solid rgb(240, 35, 80);
+  border-radius: 5px;
+}
+/* About */
+.abouts p{
+  margin: 5% 3.5%;
+  margin-left: 10%;
+}
+.educ{
+  border: 2px solid rgb(240, 35, 80);
+  padding: 2%;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.836);
+}
+.edu-boxes{
+  display: flex;
+  justify-content: space-between;
+  margin: 0 10%;
+}
+#edu-head,#lan-head{
+  margin-left: 10%;
+  font-size: x-large;
+  color: rgb(240, 35, 80);
+}
+
+/* Skills */
+.pro-boxes{
+  display: flex;
+  justify-content: space-between;
+  margin: 5% 10%;
+}
+.pro-boxes img{
+  /* border: 1px solid  rgb(240, 35, 80); */
+  background-color: rgba(255, 255, 255, 0.13);
+  padding: 3px;
+}
+.lang,.projects{
+  margin-top: 10%;
+}
+.language{
+ display: flex;
+ margin-left: 25%;
+ font-size: larger;
+ font-weight: bold;
+}
+.language p{
+  margin-right: 20%;
+  padding: 3%;
+  padding-right: 20%;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.836);
+  border: 1px solid rgb(240, 35, 80);
+}
+/* Project */
+.pj{
+  background-color: rgba(0, 0, 0, 0.836);
+  border: 1px solid rgb(240, 35, 80);
+  padding:1% 3% 5% 3%;
+  border-radius: 10px;
+}
+.pj p{
+  width: 250px;
+}
+.clicker{
+  text-align:center;
+  border-bottom: 1px solid white;
+  padding: 5px;
+} 
+.clicker a{
+  color:rgb(240, 35, 80) ;
+  font-weight: bold;
+  text-decoration: none;
+}
+.clicker a:hover{
+  color: white;
+}
+.projects{
+  display: flex;
+  justify-content: space-between;
+  margin: auto 5%;
+}
+footer a img{
+  background-color: rgb(240, 35, 79);
+  border-radius: 51%;
+  width: 60px;
+}
+footer a img:hover{
+  width: 55px;
+  background-color:rgb(240, 35, 80);
+   filter: drop-shadow(0 0 0.20rem rgb(255, 255, 255));
+   bottom: 25px;
+   right: 35px;
+}
+footer{
+  position:fixed;
+  bottom: 20px; 
+  right: 30px;
+}
+.text-btm{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+/* commom */
+button{
+  background-color: rgba(16, 43, 150, 0.014);
+  color: antiquewhite;
+  height: 30px;
+  width:130px;
+  border: 1px solid white;
+  border-radius:15px;
+}
+button:active {
+  background-color:  rgb(240, 35, 80);
+  box-shadow: 0 3px #666;
+  transform: translateY(2px);
+} 
+button:hover {
+  background-color:rgb(229, 233, 243);
+  color: black;
+  /* border: 2px solid  rgb(240, 35, 80); */
+  font-weight: bold;
+}
+h1{
+  font-size: xx-large;
+  color: rgb(240, 35, 80);
+  margin-left: 10%;
+}
+#Home, #About, #Contact,#Skills,#Project{
+  height: 100vh;
+}
+
