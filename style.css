@@ -7,7 +7,7 @@
         color: aliceblue;
     }
     nav{
-        background-color: rgb(8, 8, 32);
+        background-color: rgb(58, 58, 255);
         color: azure;
     }
     .backbg{
@@ -144,4 +144,8 @@ nav{
     border-radius: 5px;
     margin-top: 0;
     cursor: pointer;
+}
+.icons{
+    width: 10%;
+    height: 10%;
 }
