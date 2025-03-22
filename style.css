@@ -13,10 +13,10 @@
     .backbg{
         background-color: rgba(42, 130, 206, 0.123);
     }
+    .link:hover{
+        color: rgb(15, 15, 15);
+    }
     
-}
-.mtop{
-    margin-top: 10%;
 }
 .theme-btn{
     position: fixed;
@@ -43,9 +43,6 @@ main{
     font-family: "Poppins", sans-serif;
 }
 /* navbar */
-nav{
-    background-color: azure;
-}
 .word{
     text-decoration: none;
     color: black;
@@ -54,12 +51,8 @@ nav{
 .ms20{
     margin-right: 30px;
 }
-.link{
-  font-weight: 400;
-}
 .link:hover{
-  color: rgb(89, 174, 184);
-  border-bottom: 2px solid rgb(89, 174, 184);
+  color: rgb(255, 255, 255);
 }
 .icon{
     background-color: rgba(26, 104, 172, 0.315);
@@ -102,10 +95,6 @@ nav{
 .down:hover{
     color: rgb(89, 174, 184);
 }
-/* skill */
-.m--{
-    margin-top: -8%;
-}
 /* project */
 .card{
     cursor: pointer;
@@ -145,7 +134,6 @@ nav{
     margin-top: 0;
     cursor: pointer;
 }
-/* .icons{
-    width: 10%;
-    height: 10%;
-} */
+.tools{
+    margin-left: -19px;
+}
