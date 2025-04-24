@@ -38,7 +38,7 @@
  .theme-btn.sun .fa-sun{
     display: block;
  }
-main{
+main, footer{
     font-family: "Poppins", sans-serif;
 }
 /* navbar */
