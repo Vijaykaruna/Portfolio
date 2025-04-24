@@ -39,7 +39,6 @@
     display: block;
  }
 main{
-    margin-top: 57px;
     font-family: "Poppins", sans-serif;
 }
 /* navbar */
@@ -47,9 +46,6 @@ main{
     text-decoration: none;
     color: black;
     font-family: "Poppins", sans-serif;
-}
-.ms20{
-    margin-right: 30px;
 }
 .link:hover{
   color: rgb(255, 255, 255);
@@ -100,18 +96,12 @@ main{
     cursor: pointer;
 }
 
-
-
 /* contact */
 .contact-form input, .contact-form textarea{
     color: var(--first-color);
     background-color: var(--transparent-color-02);
     font-size: var(--normal-font-size);
 }
-/* .contact-form textarea{
-    width: 100%;
-    resize: none;
-} */
 ::placeholder{
     color: var(--first-color);
 }
