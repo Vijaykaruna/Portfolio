@@ -32,7 +32,7 @@ scrollTopBtn.addEventListener("click", () => {
 // Download Resume
 function Resume()
 {
-    window.open('https://drive.google.com/file/d/14ERlGiuPpyODzAgXkq0JaC5pozCB5zR0/view?usp=sharing');
+    window.open('https://drive.google.com/file/d/1ATS2MGVUBK6f-KAMFcmTSK02HOrSM-f6/view?usp=sharing');
 }
 //Send Message
 let send_btn = document.getElementById("send-btn");
