@@ -41,9 +41,32 @@ let email = document.getElementById("from-email");
 let message = document.getElementById("message");
 let subject = document.getElementById("subject");
 
+// send_btn.addEventListener("click", (ev) => {
+//     ev.preventDefault();
+//     let body_message = `Hi this, ${fullname.value} <br> My Email is ${email.value} <br> ${message.value}`
+//     Email.send({
+//         Host : "smtp.elasticemail.com",
+//         Username : "vijaykarunanithi2003@gmail.com",
+//         Password : "D7EB20F23B824059DBABE194841962300351",
+//         To : 'vijaykarunanithi2003@gmail.com',
+//         From : "vijaykarunanithi2003@gmail.com",
+//         Subject : subject.value,
+//         Body : body_message
+//     }).then(
+//       message => alert(message)
+//     );
+// });
+
 send_btn.addEventListener("click", (ev) => {
     ev.preventDefault();
-    let body_message = `Hi this, ${fullname.value} <br> My Email is ${email.value} <br> ${message.value}`
+
+    if (!fullname.value || !email.value || !subject.value || !message.value) {
+        alert("Please fill all fields before sending!");
+        return;
+    }
+
+    let body_message = `Hi, this is ${fullname.value} <br> My Email is: ${email.value} <br><br> ${message.value}`;
+
     Email.send({
         Host : "smtp.elasticemail.com",
         Username : "vijaykarunanithi2003@gmail.com",
@@ -52,7 +75,7 @@ send_btn.addEventListener("click", (ev) => {
         From : "vijaykarunanithi2003@gmail.com",
         Subject : subject.value,
         Body : body_message
-    }).then(
-      message => alert(message)
+    }).then(() => alert("Email sent successfully!"),
+        error => alert("Failed to send email: " + error)
     );
 });
