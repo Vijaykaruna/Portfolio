@@ -6,6 +6,9 @@
     .word{
         color: aliceblue;
     }
+    main{
+        background-color: rgba(42, 130, 206, 0.123);
+    }
     nav{
         background-color: rgb(58, 58, 255);
         color: azure;
@@ -32,6 +35,9 @@
     border-radius: 5px 0 0 5px;
     cursor: pointer;
  }
+ .backbg{
+    background-color: rgb(255, 255, 255);
+ }
  .theme-btn .fa-sun, .theme-btn.sun .fa-moon{
     display: none;
  }
@@ -40,6 +46,7 @@
  }
 main, footer{
     font-family: "Poppins", sans-serif;
+    background-color: rgb(245, 245, 245);
 }
 /* navbar */
 .word{

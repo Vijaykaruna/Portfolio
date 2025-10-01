@@ -35,15 +35,23 @@ function Resume()
     window.open('https://drive.google.com/file/d/1ATS2MGVUBK6f-KAMFcmTSK02HOrSM-f6/view?usp=sharing');
 }
 //Send Message
-let send_btn = document.getElementById("send-btn");
-let fullname = document.getElementById("from-name");
-let email = document.getElementById("from-email");
-let message = document.getElementById("message");
-let subject = document.getElementById("subject");
+// let send_btn = document.getElementById("send-btn");
+// let fullname = document.getElementById("from-name");
+// let email = document.getElementById("from-email");
+// let message = document.getElementById("message");
+// let subject = document.getElementById("subject");
 
-// send_btn.addEventListener("click", (ev) => {
+
+// send_btn.addEventListener("submit", (ev) => {
 //     ev.preventDefault();
-//     let body_message = `Hi this, ${fullname.value} <br> My Email is ${email.value} <br> ${message.value}`
+
+//     if (!fullname.value || !email.value || !subject.value || !message.value) {
+//         alert("Please fill all fields before sending!");
+//         return;
+//     }
+
+//     let body_message = `Hi, this is ${fullname.value} <br> My Email is: ${email.value} <br><br> ${message.value}`;
+
 //     Email.send({
 //         Host : "smtp.elasticemail.com",
 //         Username : "vijaykarunanithi2003@gmail.com",
@@ -52,30 +60,48 @@ let subject = document.getElementById("subject");
 //         From : "vijaykarunanithi2003@gmail.com",
 //         Subject : subject.value,
 //         Body : body_message
-//     }).then(
-//       message => alert(message)
+//     }).then(() => alert("Email sent successfully!"),
+//         error => alert("Failed to send email: " + error)
 //     );
 // });
 
-send_btn.addEventListener("click", (ev) => {
-    ev.preventDefault();
 
-    if (!fullname.value || !email.value || !subject.value || !message.value) {
-        alert("Please fill all fields before sending!");
-        return;
-    }
+const send_btn = document.getElementById("send-btn");
+const fullname = document.getElementById("from-name");
+const email = document.getElementById("from-email");
+const subject = document.getElementById("subject");
+const message = document.getElementById("message");
+const form = document.getElementById("contact-form");
 
-    let body_message = `Hi, this is ${fullname.value} <br> My Email is: ${email.value} <br><br> ${message.value}`;
 
-    Email.send({
-        Host : "smtp.elasticemail.com",
-        Username : "vijaykarunanithi2003@gmail.com",
-        Password : "D7EB20F23B824059DBABE194841962300351",
-        To : 'vijaykarunanithi2003@gmail.com',
-        From : "vijaykarunanithi2003@gmail.com",
-        Subject : subject.value,
-        Body : body_message
-    }).then(() => alert("Email sent successfully!"),
-        error => alert("Failed to send email: " + error)
-    );
+
+form.addEventListener("submit", function(ev) {
+  ev.preventDefault();
+
+  if (!fullname.value || !email.value || !subject.value || !message.value) {
+    alert("Please fill all fields before sending!");
+    return;
+  }
+
+  let body_message = `
+    <p>Hi, this is <strong>${fullname.value}</strong></p>
+    <p>My Email is: ${email.value}</p>
+    <p>Message:</p>
+    <p>${message.value}</p>
+  `;
+
+  Email.send({
+    Host: "smtp.elasticemail.com",
+    Username: "vijaykarunanithi2003@gmail.com", // your verified SMTP email
+    Password: "D7EB20F23B824059DBABE194841962300351", // your SMTP password
+    To: "vijaykarunanithi2003@gmail.com",
+    From: "vijaykarunanithi2003@gmail.com",
+    Subject: subject.value,
+    Body: body_message
+  }).then(
+    () => alert("Email sent successfully!"),
+    (error) => alert("Failed to send email: " + error)
+  );
+
+  form.reset();
 });
